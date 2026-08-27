@@ -21,8 +21,8 @@ The downloaded `stocks.csv` is stored as `data/stock_history.csv`. It contains `
 ## Run
 
 ```powershell
-C:\Users\kesha\AppData\Local\Programs\Python\Python311\python.exe -m pip install -r requirements.txt
-C:\Users\kesha\AppData\Local\Programs\Python\Python311\python.exe -m uvicorn api:app --reload --port 8504
+python.exe -m pip install -r requirements.txt
+python.exe -m uvicorn api:app --reload --port 8504
 ```
 
 Open `http://localhost:8504/docs` for the interactive API documentation.
