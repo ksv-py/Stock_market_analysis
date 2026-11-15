@@ -1,0 +1,9 @@
+# Runtime-only requirements for the MarketScope FastAPI service.
+# The repo's requirements.txt also pulls jupyter and matplotlib, which api.py
+# never imports (they are only used by stock_market_analysis.ipynb). Dropping
+# them keeps the deploy bundle small and the install fast. If the notebook is
+# ever served from the same environment, use requirements.txt instead.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pandas>=2.2
+numpy>=1.26

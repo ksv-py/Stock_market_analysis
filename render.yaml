@@ -1,0 +1,10 @@
+# Render Blueprint for MarketScope (FastAPI + static HTML frontend at /).
+# Apply from the Render dashboard: New > Blueprint, point at ksv-py/Stock_market_analysis.
+# Uses requirements-deploy.txt (no jupyter/matplotlib — api.py never imports them).
+services:
+  - type: web
+    name: marketscope
+    env: python
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
